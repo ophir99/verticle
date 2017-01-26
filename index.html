@@ -1,0 +1,112 @@
+<html ng-app="vApp">
+<head>
+    <title>Vertical technologies</title>
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+    <!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+
+<link href="https://fonts.googleapis.com/css?family=Carrois+Gothic+SC" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Dosis+Oxygen+Quicksand+Rubik" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="dist/css/unslider.css">
+
+    <!-- Your app -->
+</head>
+<body>
+    <nav class="white z-depth-0">
+    <div class="nav-wrapper white">
+      <div class="container">
+          <div class="wow">
+              <a href="#/" class="brand-logo orange-text" style="font-family: 'Julius Sans One', sans-serif;">Verticle </a>
+
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down ">
+        <li ><a class="" href="#aboutUs">About us</a></li>
+        <li ><a class="" href="#services">Services</a></li>
+        <li ><a class="" href="#">OEM partners</a></li>
+        <li ><a class="" href="#">Partners</a></li>
+        <li ><a class="" href="#">RMA process</a></li>
+        <li ><a class="" href="#">Careers</a></li>
+        <li ><a class="" href="#">Contact us</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a class="" href="#">About us</a></li>
+        <li><a class="" href="#">Services</a></li>
+        <li><a class="" href="#">OEM partners</a></li>
+        <li><a class="" href="#">Partners</a></li>
+        <li ><a class="" href="#">RMA process</a></li>
+        <li ><a class="" href="#">Careers</a></li>
+        <li ><a class="" href="#">Contact us</a></li>
+      </ul> 
+          </div>
+      </div>
+    </div>
+  </nav>
+
+<div ng-view>
+    
+</div>
+
+   <footer class="page-footer black">
+          <div class="container black">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text flow-text">Verticle technologies</h5>
+                <p class="grey-text text-lighten-4"></p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text"></h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!"></a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"></a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"></a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Verticle Technologies
+            <a class="grey-text text-lighten-4 right" href="#!"></a>
+            </div>
+          </div>
+        </footer>
+    <script src="dist/js/unslider-min.js"></script> <!-- but with the right path! -->
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('.collapsible').collapsible();
+    $('.my-slider').unslider({
+        autoplay: true
+    });
+  });
+</script>
+
+<script type="text/javascript">
+    angular.module('vApp', ['ngRoute']).config(function($routeProvider){
+    	$routeProvider.when("/", {
+    		templateUrl:"temps_/home_temp.html"
+    	}).when("/aboutUs", {
+            templateUrl: "temps_/about_us.html"
+        }).when("/services", {
+            templateUrl: "temps_/services.html"
+        });
+    });
+</script>
+</html>
